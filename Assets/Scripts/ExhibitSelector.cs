@@ -93,4 +93,13 @@ public class ExhibitSelector : Selector {
     {
         return exhs.Length;
     }
+    public void FindEqualsExhibits() {
+        for(int i = 0; i < exhs.Length; i++) {
+            for(int a = i + 1; a < exhs.Length; a++) {
+                if(exhs[i].id.Equals(exhs[a].id)) {
+                    print(exhs[a].id + "" + exhs[a]);
+                }
+            }
+        }
+    }
 }

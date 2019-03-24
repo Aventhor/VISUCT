@@ -2,12 +2,18 @@
 using UnityEngine;
 
 public class SpotSelector : Selector {
-    public Transform[] positions;
+    public Spot[] positions;
+
     public void ChangeSpot(int id)
     {
         try
         {
-            gaze.player.transform.position = positions[id].position;
+            for(int i = 0; i < positions.Length; i++) {
+                if(positions[i].id.Equals(id)) {
+                    gaze.player.transform.position = positions[i].transform.position;
+                    break;
+                }
+            }
         }
         catch(Exception e)
         {

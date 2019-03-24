@@ -18,7 +18,6 @@ public class UIManager : MonoBehaviour {
     [Header("Холст")]
     public GameObject UICanvas;
 
-
     [HideInInspector] public GameObject instanceUi;
     [HideInInspector] public GameObject circleInstance;
     [HideInInspector] public GameObject noticeBGInstance;
@@ -29,7 +28,6 @@ public class UIManager : MonoBehaviour {
     [HideInInspector] public GameObject taskTextInstance;
     [HideInInspector] public GameObject taskProgressInstance;
     [HideInInspector] public GameObject loadingProgressTextInstance;
-
     void Awake()
     {
         if(instance == null)
